@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<title>条件渲染</title>
+	</head>
+	
+	<body>
+		<div id="app">
+			<h1 v-if="awesmoe">Vue is awesome!</h1>
+			<h1 v-else>Oh no 😢</h1>
+		</div>
+		
+		<script>
+			var app = new Vue({
+				// element的缩写，挂载元素
+				el:"#app",
+				data:{
+					awesmoe:true
+				}
+			})
+		</script>
+	</body>
+</html>

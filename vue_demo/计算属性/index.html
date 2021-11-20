@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<title>计算属性</title>
+	</head>
+	
+	<body>
+		<div id="app">
+			<p>当前时间方法:{{getCurrentTime()}}</p>
+			<p>当前时间属性:{{getCurrentTime1}}</p>
+		</div>
+		
+		<script>
+			var app = new Vue({
+				// element的缩写，挂载元素
+				el:"#app",
+				// 方法
+				methods:{
+					getCurrentTime:function(){
+						return Date.now();
+					}
+				},
+				// 计算属性
+				computed:{
+					getCurrentTime1:function(){
+						return Date.now();
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<title>列表渲染</title>
+	</head>
+	
+	<body>
+		<ul id="example-1">
+			<li v-for="item in items">
+				{{item.message}}
+			</li>
+		</ul>
+		
+		<script>
+			var app = new Vue({
+				// element的缩写，挂载元素
+				el:"#example-1",
+				data:{
+					items:[
+						{message:'Foo'},
+						{message:'Bar'}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
